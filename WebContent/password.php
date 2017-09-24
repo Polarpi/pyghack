@@ -1,6 +1,6 @@
 <?php
 if($_POST["message"]) {
-    mail("your@email.address", "Form to email message", $_POST["message"], "From: an@email.address");
+    mail("yutongl3@illinois.edu", "Form to email message", $_POST["message"], "From: MoviePool@outlook.com");
 }
 ?>
 <!doctype html>
