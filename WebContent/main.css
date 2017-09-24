@@ -71,13 +71,8 @@ nav li a#home-link {
 	margin: auto;
 	overflow: auto;
 }
-
-.header-img img {
-	width: 400px;
-}
-
 .header-img {
-	width: 400px;
+	width: 25%;
 }
 
 .header-text {
