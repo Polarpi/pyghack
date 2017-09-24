@@ -84,7 +84,7 @@
 			<input type="password" class="form-control" id="repeat" placeholder="Please enter your password again" name="repeatpassword" required>
         </div>
 
-            <button type="submit" class="signupbt" name="sub">Sign Up</button>
+            <button type="submit" class="signupbt" name="submitsignup">Sign Up</button>
             <input type="checkbox" checked="checked"> Remember me
 
           	<div class="privacy-text">
