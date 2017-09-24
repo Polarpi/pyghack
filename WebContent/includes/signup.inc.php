@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['sub'])) {
+if (isset($_POST['submitsignup'])) {
 	
 
 	include_once 'dbh.inc.php';

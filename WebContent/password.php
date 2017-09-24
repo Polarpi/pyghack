@@ -1,3 +1,8 @@
+<?php
+if($_POST["message"]) {
+    mail("yutongl3@illinois.edu", "Form to email message", $_POST["message"], "From: MoviePool@outlook.com");
+}
+?>
 <!doctype html>
 <html>
 <head>
@@ -5,13 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:300,400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" type="text/css" href="carousel.css">
   <script src="carousel.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <?php include 'password.php';?>
+  
 <title>Movie Pool | Reset Password</title>
 <link rel="stylesheet" type="text/css" href="password.css">
 </head>
@@ -44,8 +49,10 @@
 		<div id="sc-password">
 	  		<h1>Reset Password</h1>
 	  		<div class="sc-container">
-	    		<input type="text" placeholder="Username or Email" />
-	    		<input type="submit" value="Get New Password" />
+            <form method="post" action="password.php">
+                <input type="text" name="message" placeholder="Email"></textarea>
+                <input type="submit" value="Get New Password"/>
+            </form>
 	  		</div>
 		</div>
 	</div>
