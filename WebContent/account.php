@@ -1,18 +1,17 @@
-<!doctype html>
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movie Pool | Account</title>
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="carousel.css">
-  <script src="carousel.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Movie Pool | Reset Password</title>
-<link rel="stylesheet" type="text/css" href="password.css">
+  <link rel="stylesheet" type="text/css" href="account.css">
 </head>
 <header>
 	<nav class="navbar navbar-fixed-top">
@@ -32,23 +31,41 @@
 	  		<li><a href="contact.html">Contact Us</a></li>
 	  	</ul>
 	  	<ul class="nav navbar-nav navbar-right">
-	  		<li id="right-nav"><a href="account.php">Login</a></li>
+	  		<li id="right-nav"><a href="account.html">Login</a></li>
 	  	</ul>
 	  </div>
 	</div>
   </nav>
 </header>
 <body>
-  	<div class="container" id="pass-window">
-		<div id="sc-password">
-	  		<h1>Reset Password</h1>
-	  		<div class="sc-container">
-	    		<input type="text" placeholder="Username or Email" />
-	    		<input type="submit" value="Get New Password" />
-	  		</div>
-		</div>
-	</div>
-	<footer class="footer">
+<form action = "includes/login.inc.php" method = "POST">
+  <div class="imgcontainer">
+    <img src="img/login/profile.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username or E-mail" name="username" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+        
+    <button type="submit" class="loginbtn" name = "submitlogin">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+  <div class="container" id="login-extra">
+  	<div class="row">
+  		<div id="psw">
+  			<a href="password.html">Forgot Password?</a>
+  		</div>
+  		<div id="acct">
+  			<a href="signup.php">Don't have an account?</a>
+  		</div>
+  	</div>
+  </div>
+</form>
+
+<footer class="footer">
 	<div class="container">
 	<div class="row">
 		<div class="col-md-8">
